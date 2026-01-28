@@ -1,0 +1,27 @@
+--Database Creation
+CREATE DATABASE normalization;
+
+--Using Database
+USE normalization
+
+--Default/1NF Table
+CREATE TABLE students(
+       StudentID VARCHAR(50),
+       Name VARCHAR(50) NOT NULL,
+       Email VARCHAR(50) NOT NULL,
+       Major VARCHAR(50) NOT NULL,
+       MajorHead VARCHAR(50),
+       CourseID VARCHAR(50),
+       CourseTitle VARCHAR(50) NOT NULL,
+       Credit INT,
+       Grade CHAR(1),
+       Building VARCHAR(50),
+       Room VARCHAR(50)
+       );
+
+ INSERT INTO students
+       VALUES ('S101', 'Alice', 'alice@uni.edu', 'CS', 'Dr.Smith', 'CS301', 'Algorithms', 4, 'A', 'Science', '205'),
+       ('S101', 'Alice', 'alice@uni.edu', 'CS', 'Dr.Smith', 'MATH201', 'Linear Algebra', 3, 'B', 'Math Wing', '101'),
+       ('S102', 'Bob', 'bob@uni.edu', 'CS', 'Dr.Smith', 'CS301', 'Algorithms', 4, 'C', 'Science', '205'),
+       ('S103', 'Carol', 'carol@uni.edu', 'Physcis', 'Dr.Lee', 'PHY101', 'Mechanics', 4, 'A', 'Science', '301'),
+       ('S103', 'Carol', 'carol@uni.edu', 'Physcis', 'Dr.Lee', 'MATH201', 'Linear Algebra', 3, 'A', 'Math Wing', '101');
